@@ -3,8 +3,9 @@ function isEnoughCapacity(products, containerSize) {
   let totalSum = 0;
   let check;
   for (const value of values) {
-    (totalSum += value) <= containerSize ? (check = true) : (check = false);
+    totalSum += value;
   }
+  totalSum <= containerSize ? (check = true) : (check = false);
   return check;
 }
 
